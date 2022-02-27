@@ -1,5 +1,17 @@
 body {
-    background-color: red;
+    background-image: url('images/bg_space_3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+p {
+    color: rgb(221, 217, 217);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(255, 255, 255)
 }
 
 /* div#carouselExampleIndicators {
@@ -8,33 +20,61 @@ body {
     margin: 0 auto;
 } */
 
+:root {
+    --bs-primary-rgb: 15, 13, 27;
+    --bs-secondary-rgb: 39, 35, 89;
+    /* --bs-info-rgb: 255, 255, 255; */
+}
+
 .text-justify {
     text-align: justify;
 }
 
 #main-title {
     font-size: 50px;
-    color: rgb(24, 22, 22);
+    /* color: rgb(24, 22, 22); */
 }
 
-#img-media-1 {
+.img-media-1 {
     width: 300px;
 }
 
 @media screen and (min-width: 1280px) {
-    #img-media-1 {
+    .img-media-1 {
         width: 300px;
     }
 }
 
 @media screen and (max-width: 1280px) {
-    #img-media-1 {
+    .img-media-1 {
         width: 250px;
     }
 }
 
 @media screen and (max-width: 1100px) {
-    #img-media-1 {
+    .img-media-1 {
         width: 200px;
+    }
+}
+
+.img-media-2 {
+    width: 400px;
+}
+
+@media screen and (min-width: 1280px) {
+    .img-media-2 {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .img-media-2 {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .img-media-2 {
+        width: 250px;
     }
 }
