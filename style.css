@@ -6,7 +6,7 @@ body {
     background-size: cover;
 }
 
-p {
+p, li {
     color: rgb(221, 217, 217);
 }
 
@@ -77,4 +77,8 @@ h1, h2, h3, h4, h5, h6 {
     .img-media-2 {
         width: 250px;
     }
+}
+
+#center-content-1 {
+    margin-left: calc(50% - 250px);
 }
