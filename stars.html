@@ -11,6 +11,12 @@
 <body>
     <div class="container bg-primary">
 
+      <div class="center-screen" id="canvas">
+        <span onclick="closeCanvas()">Bezárás</span> <br>
+        <img src="" id="canvas-img" width="600px">
+        <p id="img-title"></p>
+      </div>
+
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -94,7 +100,7 @@
         <hr>
 
         <div class="row">
-          <div class="col-12 col-md-12 col-lg-3 offset-lg-2"><h1>Nap</h1><img src="images/sun_1.jpg" alt="Nap" title="Nap" class="mb-4 img-media-1"></div>
+          <div class="col-12 col-md-12 col-lg-3 offset-lg-2"><h1>Nap</h1><img src="images/sun_1.jpg" alt="Nap" title="Nap" class="mb-4 img-media-1 img-view" id="sun" onclick="showImg('sun')"></div>
           <div class="col-12 col-md-12 col-lg-5">    
             <p class="mt-5 text-justify">
               A Nap a Naprendszer központi csillaga. Körülötte kering a Föld, valamint a Naprendszerhez tartozó bolygók, törpebolygók, kisbolygók, üstökösök stb. A Földtől körülbelül 150 millió km távolságra van, ami fénysebességgel 8,3 perc. A Nap tartalmazza a Naprendszer anyagának 99,8%-át, átmérője 109 földátmérő. 73,5%-ban hidrogénből áll, amely a központjában zajló magfúzió során héliummá alakul. A Nap egy G2V színképtípusú csillag, a mintegy 10 milliárd évig tartó fősorozatbeli fejlődésének a felénél jár. A fűtőanyagát jelentő hidrogén elhasználása után, 5 milliárd év múlva vörös óriássá duzzad, majd a külső rétegeiből planetáris köd képződik, magja pedig magába roskadva fehér törpévé alakul. Ez egyúttal a földi élet pusztulását fogja magával hozni. Mivel anyagát képlékeny plazma alkotja, a különböző szélességi körön levő területei eltérő sebességgel forognak.
@@ -109,11 +115,11 @@
               A VY Canis Majoris (VY CMa) az egyik legnagyobb csillag, de közel sem a legfényesebb: szabad szemmel fényszennyezés-mentes helyen is csak sejthető, megfigyeléséhez távcsőre van szükség. A Nagy Kutya csillagképben található vörös hiperóriás, amelynek sugara 1420 ± 120 nap-sugár, vagy 6,6 csillagászati egység, és mintegy 1200 parszek távolságban (3900 fényév, 3,7×1016 km) található a Földtől. Ellentétben a legtöbb hiperóriás csillaggal, melyek kettős- vagy többszörös csillagrendszerekben fordulnak elő, a VY CMa egyedül álló csillag.
             </p>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4"><img src="images/vy_canis_majoris_1.svg.png" alt="VY Canis Majoris" title="VY Canis Majoris" width="250" class="mb-4"></div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4"><img src="images/vy_canis_majoris_1.svg.png" alt="VY Canis Majoris" title="VY Canis Majoris" width="250" class="mb-4 img-view" id="vy" onclick="showImg('vy')"></div>
         </div>
 
         <div class="row">
-          <div class="col-12 col-md-12 col-lg-3 offset-lg-2"><h1>Vörös óriások</h1><img src="images/red_giant_1.jpg" alt="Vörös óriás" title="Ilyen vörös óriás az említett VY Canis Majoris" class="mb-4 img-media-1"></div>
+          <div class="col-12 col-md-12 col-lg-3 offset-lg-2"><h1>Vörös óriások</h1><img src="images/red_giant_1.jpg" alt="Vörös óriás" title="Ilyen vörös óriás az említett VY Canis Majoris" class="mb-4 img-media-1 img-view" id="redg" onclick="showImg('redg')"></div>
           <div class="col-12 col-md-12 col-lg-5">    
             <p class="mt-5 text-justify">
               A Hertzsprung–Russell-diagram alapján a vörös óriások nagy, nem fősorozatbeli csillagok. A Napnál kissé nagyobb tömegű csillagok, amelyek magjukban már kimerítették hidrogénkészletüket és elkezdték a magot körülvevő rétegben lévő hidrogén égetését. Mivel az energiaforrás így közelebb kerül a felszínhez, a csillag tágulni kezd. A csillag ezáltal ugyan fényesebb lesz, viszont sugara (ebből következően a felszíne is) erősebben növekszik, mint a fényessége. Ennek eredményeképpen a csillag nagyobb lesz, de hidegebb és vörösebb színű, s ebből adódik a név: vörös óriás.
@@ -128,11 +134,11 @@
               A barna törpék olyan égitestek, melyek tömege túl kicsi ahhoz, hogy a belsejükben stabil hidrogén-hélium magfúzió jöjjön létre, és így valódi csillagokká váljanak. Ez a reakció ugyanis csak akkor indulhat be, ha egy csillag tömege elég nagy ahhoz, hogy annak magjában a hőmérséklet a 3 millió kelvint meghaladja. Ez a tömeg nagyjából a Nap tömegének 8%-a, másként kifejezve a Jupiter tömegének nyolcvanszorosa. A barna törpék tömege ennél kisebb, a vörös törpecsillagok és az óriásbolygók tömege között van. A keletkezési modellek alapján kialakulásuk közben valamikor a magjukban beindult a magfúzió, de nem a hidrogén, hanem lítium- vagy deutériumfúzió, ehhez 13 jupitertömeg is elegendő, ez jelöli ki alsó tömeghatárukat. Ez a magfúzió kb. 100 ezer évig tarthatott, ami csillagászati időskálán mérve epizódszerű csak.
             </p>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4"><img src="images/brown_dwarf.jpg" alt="Az 54 Piscium B barna törpe" title="Az 54 Piscium B barna törpe" width="250" class="mb-4"></div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4"><img src="images/brown_dwarf.jpg" alt="Az 54 Piscium B barna törpe" title="Az 54 Piscium B barna törpe" width="250" class="mb-4 img-view" id="brownd" onclick="showImg('brownd')"></div>
         </div>
 
         <div class="row">
-          <div class="col-12 col-md-12 col-lg-3 offset-lg-2"><h1>Fehér törpék</h1><img src="images/white_dwarf_1.jpg" alt="Fehér törpe" title="A Csiga-köd központi csillaga tipikus fehér törpe" class="mb-4 img-media-1"></div>
+          <div class="col-12 col-md-12 col-lg-3 offset-lg-2"><h1>Fehér törpék</h1><img src="images/white_dwarf_1.jpg" alt="Fehér törpe" title="A Csiga-köd központi csillaga tipikus fehér törpe" class="mb-4 img-media-1 img-view" id="whited" onclick="showImg('earth')"></div>
           <div class="col-12 col-md-12 col-lg-5">    
             <p class="mt-5 text-justify">
               A fehér törpe állapot a csillagfejlődés egyik, asztrofizikailag jól behatárolható, végső stádiuma. A fehér törpecsillagok a csillagászat szemszögéből A színképosztályú, a Nap abszolút fényességének tizedével, századával fénylő csillagok, melyeket gyakran planetáris köd vesz körül. A fehér törpe körüli planetáris köd a megelőző, vörös óriás állapot külső légkörének maradványa, mely a csillagmag gravitációs összehúzódása után marad vissza. A részecskefizika szemszögéből a fehér törpe nagy nyomású anyagkoncentráció, melyben az elektrongáz kvantumfizikailag degenerált formában van jelen. Az anyag ilyen állapotában az elektrongáz további gravitációs összenyomódását a Pauli-féle kizárási elv akadályozza meg, mely szerint két fermion típusú részecske (jelen esetben elektron) nem foglalhatja el ugyanazt a kvantumállapotot egy időben.
@@ -140,15 +146,14 @@
           </div>
         </div>  
         
-        <div class="row">
-          <div class="col-10 offset-4">
-            <img src="images/hertzsprung-russel-diagram.jpg" alt="A Hertzsprung–Russell-diagram" title="A Hertzsprung–Russell-diagram"> <br>
-            <p class="mb-4">A Hertzsprung–Russell-diagram <a href="https://hu.wikipedia.org/wiki/Hertzsprung%E2%80%93Russell-diagram" target="_blank">Bővebben</a></p>
-          </div>
-        </div>
+        
+          <img src="images/hertzsprung-russel-diagram.jpg" alt="A Hertzsprung–Russell-diagram" title="A Hertzsprung–Russell-diagram" id="center-content-3" onclick="showImg('center-content-3')" class="img-view"> <br>
+          <div id="center-content-4"><p class="mb-4">A Hertzsprung–Russell-diagram <a href="https://hu.wikipedia.org/wiki/Hertzsprung%E2%80%93Russell-diagram" target="_blank" width="280">Bővebben</a></p></div>
+          
 
     </div>
 
     <script src="dist/js/bootstrap.min.js"></script>
+    <script src="imgviewer.js"></script>
 </body>
 </html>

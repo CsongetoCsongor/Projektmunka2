@@ -11,6 +11,12 @@
 <body>
     <div class="container bg-primary">
 
+      <div class="center-screen" id="canvas">
+        <span onclick="closeCanvas()">Bezárás</span> <br>
+        <img src="" id="canvas-img" width="600px">
+        <p id="img-title"></p>
+      </div>
+
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -94,7 +100,7 @@
         <hr>
 
         <div class="row">
-          <div class="col-12 col-md-12 col-lg-3 offset-lg-2"><h1>Tejútrendszer</h1><img src="images/milky_way_2.jpg" alt="Tejútrendszer" title="ejútrendszer" class="mb-4 img-media-1"></div>
+          <div class="col-12 col-md-12 col-lg-3 offset-lg-2"><h1>Tejútrendszer</h1><img src="images/milky_way_2.jpg" alt="Tejútrendszer" title="Tejútrendszer" class="mb-4 img-media-1 img-view" id="milkyw" onclick="showImg('milkyw')"></div>
           <div class="col-12 col-md-12 col-lg-5">    
             <p class="mt-5 text-justify">
               A Tejútrendszer a Lokális Galaxiscsoport egyik (a Hubble-féle galaxisosztályozás szerinti SBb vagy SBc típusú) küllős spirálgalaxisa, melyben a Naprendszer és ezen belül Földünk található. Mai becslések alapján 100-400 milliárd csillag található benne, átmérője 30 kiloparszek (97 800 fényév, azaz 9,5·1017 kilométer), legnagyobb vastagsága 5 kpc (16 300 fényév). A Földről két spirálkarját, az Orion- és Nyilas-kart látjuk. Vizsgálatát megnehezíti, hogy belülről látjuk.
@@ -109,11 +115,11 @@
               A Lokális galaxiscsoport (rövidítve LGCs), Lokális csoport vagy Lokális rendszer (régebbi nevén Lokális galaxishalmaz vagy Lokális halmaz) az a galaxishalmaz, amelybe a Tejútrendszer és az Androméda-galaxis is tartozik. A csoport körülbelül harminc tagot számlál, gravitációs középpontja e két említett galaxis között helyezkedik el. Átmérője 10 millió fényév körüli, és kettős (súlyzó) alakja van. A csoport teljes tömege feltehetően (1,29 ± 0,14)·1012M☉. A csoport maga egyike a Virgo-szuperhalmaz csoportjainak.
             </p>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4"><img src="images/local_group_1.png" alt="Lokális Galaxiscsoport" title="A Lokális galaxiscsoport és a közeli galaxiscsoportok térbeli megjelenítése" width="250" class="mb-4"></div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4"><img src="images/local_group_1.png" alt="Lokális Galaxiscsoport" title="A Lokális galaxiscsoport és a közeli galaxiscsoportok térbeli megjelenítése" width="250" class="mb-4 img-view" id="localg" onclick="showImg('localg')"></div>
         </div>
 
         <div class="row">
-          <div class="col-12 col-md-12 col-lg-4 offset-lg-2"><h1>Androméda-galaxis</h1><img src="images/andromeda_galaxy_1.jpeg" alt="Androméda-galaxis" title="Androméda-galaxis" class="mb-4 img-media-2"></div>
+          <div class="col-12 col-md-12 col-lg-4 offset-lg-2"><h1>Androméda-galaxis</h1><img src="images/andromeda_galaxy_1.jpeg" alt="Androméda-galaxis" title="Androméda-galaxis" class="mb-4 img-media-2" id="andr img-view" onclick="showImg('andr')"></div>
           <div class="col-12 col-md-12 col-lg-4">    
             <p class="mt-5 text-justify">
               Az Androméda-galaxis vagy Androméda-köd (M31, NGC 224) egy spirálgalaxis az Andromeda csillagképben. Sb típusú spirálgalaxis. Távolsága a Naptól 2,5 millió fényév. A hozzánk legközelebbi extragalaxisok egyike, a Lokális Csoport legnagyobb tömegű galaxisa, csak a Tejútrendszer körül keringő törpegalaxisok vannak közelebb nála. Átmérője 220 ezer fényév. Tizennégy törpegalaxis kering körülötte. Tömege 800-1500 milliárd naptömeg. 400 000 km/h sebességgel közeledik a Tejútrendszerhez.
@@ -128,7 +134,7 @@
               Az UGC 2885 egy SA(rs)c típusú , nagy, korlátos spirálgalaxis a Perszeusz csillagképben . 232 millió fényévre (71  Mpc ) van a Földtől, átmérője pedig 463 000  ly (142 000  pc ), így az egyik legnagyobb ismert spirálgalaxis . A Halak-Perseus szuperhalmaz egyik lehetséges tagja is . Az UGC 2885 egy spirálgalaxis , amelynek felületi fényereje viszonylag alacsony.
             </p>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4"><img src="images/ugc_2885_1.jpeg" alt="UGC 2885" title="UGC 2885" width="250" class="mb-4"></div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4"><img src="images/ugc_2885_1.jpeg" alt="UGC 2885" title="UGC 2885" width="250" class="mb-4 img-view" id="ugc" onclick="showImg('ugc')"></div>
         </div>
 
 
@@ -136,5 +142,6 @@
     </div>
 
     <script src="dist/js/bootstrap.min.js"></script>
+    <script src="imgviewer.js"></script>
 </body>
 </html>

@@ -11,6 +11,12 @@
 <body>
     <div class="container bg-primary">
 
+      <div class="center-screen" id="canvas">
+        <span onclick="closeCanvas()">Bezárás</span> <br>
+        <img src="" id="canvas-img" width="600px">
+        <p id="img-title"></p>
+      </div>
+
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -101,11 +107,11 @@
               Sagittarius A* (ejtsd: „A” csillag, rövidítve Sgr A*) egy nagyon fényes és kompakt rádióforrás a Tejútrendszer magjában, közel a Nyilas és a Skorpió csillagkép határához. Egy nóva maradványban helyezkedik el, a Sagittarius A-ban. Az Sgr A* közelében valószínűleg egy nagyon nagy tömegű fekete lyuk található. Általánosan elfogadott nézet, hogy ilyen fekete lyukak találhatók sok – ha nem minden – spirál- és elliptikus galaxis magjában. Régóta feltételezték a csillagászok, hogy a Tejútrendszer magjában is léteznie kell egy nagy tömegű fekete lyuknak. Az Sgr A* körül keringő S2 nevű csillag mozgásának megfigyeléséből származó adatok alapján feltételezhető volt, hogy az Sgr A* ennek a fekete lyuknak a helye.
             </p>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4"><img src="images/sagittarius_a_1.jpg" alt="Föld" title="Föld" width="250" class="mb-4"></div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4"><img src="images/sagittarius_a_1.jpg" alt="Sagittarius A*" title="Sagittarius A*" width="250" class="mb-4 img-view" id="saga" onclick="showImg('saga')"></div>
         </div>
 
         <div class="row">
-          <div class="col-12 col-md-12 col-lg-3 offset-lg-2"><h1>Messier 87</h1><img src="images/messier_87_1.jpg" alt="Mars" title="Mars" class="mb-4 img-media-1"></div>
+          <div class="col-12 col-md-12 col-lg-3 offset-lg-2"><h1>Messier 87</h1><img src="images/messier_87_1.jpg" alt="Messier 87" title="Messier 87" class="mb-4 img-media-1 img-view" id="mess87" onclick="showImg('mess87')"></div>
           <div class="col-12 col-md-12 col-lg-5">    
             <p class="mt-5 text-justify">
               A Messier 87 (M87, Virgo A, NGC 4486) egy óriási elliptikus galaxis. A Virgo-halmaz legnagyobb és legfényesebb tagja, mely közel esik a halmaz dinamikai középpontjához. A galaxisban található egy figyelemre méltó aktív galaxismag, ami erősen sugároz a spektrum valamennyi tartományában, különösen erősen a rádióhullámok tartományában. Csillagászok számításai szerint a galaxis közepén egy hozzávetőleg 3,2 milliárd (3,2 ± 0,9)×109 naptömegnyi szupermasszív fekete lyuk található. Az Event Horizon Teleszkóp 2017-ben fényképezte le ezt a fekete lyukat (közzétéve 2019-ben).
@@ -120,11 +126,11 @@
               A TON 618 egy nagyon távoli és kimondottan fényes kvazár. A Vadászebek és a Bereniké Haja csillagképek határához közel helyezkedik el. Az egyik leghatalmasabb (szupermasszív) fekete lyukat tartalmazza, amit valaha találtunk, méghozzá egy 66 milliárd M (Naptömeg) tömegűt.
             </p>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4"><img src="images/ton_618_1.jpg" alt="Föld" title="Föld" width="250" class="mb-4"></div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4"><img src="images/ton_618_1.jpg" alt="TON 618" title="TON 618" width="250" class="mb-4 img-view" id="ton" onclick="showImg('ton')"></div>
         </div>
 
         <div class="row">
-          <div class="col-12 col-md-12 col-lg-4 offset-lg-2"><h1>Hawking-sugárzás</h1><img src="images/hawking_radiation_1.webp" alt="Mars" title="Mars" class="mb-4 img-media-2"></div>
+          <div class="col-12 col-md-12 col-lg-4 offset-lg-2"><h1>Hawking-sugárzás</h1><img src="images/hawking_radiation_1.webp" alt="Hawking-sugárzás" title="Hawking-sugárzás" class="mb-4 img-media-2 img-view" id="hawkingr" onclick="showImg('hawkingr')"></div>
           <div class="col-12 col-md-12 col-lg-4">    
             <p class="mt-5 text-justify">
               Hawking-sugárzás olyan megjósolt, de kísérlet vagy megfigyelés által még nem igazolt feketetest-sugárzás, amely a fekete lyukak eseményhorizontjának környezetében jön létre kvantummechanikai jelenségek miatt. A sugárzást Stephen Hawking angol elméleti fizikusról nevezték el, aki 1974-ben közölt tanulmányban vetette fel a jelenség elméleti lehetőségét. A Hawking-sugárzás miatt csökken a fekete lyuk energiája és tömege, ezt a jelenséget fekete lyuk párolgásának hívják.
@@ -132,8 +138,39 @@
           </div>
         </div>
 
+       <div id="tableholder">
+        <table class="table table-dark table-striped table-hover  caption-top">
+          <caption>Top 3 legnagyobb fekete lyuk</caption>
+          <thead>
+            <tr>
+              <th scope="col">A fekete lyuk helye</th>
+              <th scope="col">tömeg (naptömegben)</th>
+              <th scope="col">megjegyzés</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">TON 618</th>
+              <td>60 000 000 000</td>
+              <td>Megbecsülve a kvazár Hβ emisszió vonalas összefüggéséből.</td>
+            </tr>
+            <tr>
+              <th scope="row">S5 0014+81</th>
+              <td>40 000 000 000</td>
+              <td>Egy 2010-es kiadvány szerint lehetséges a fekete lyuk tömegének túlbecslése az optikai csalódás jelensége miatt.</td>
+            </tr>
+            <tr>
+              <th scope="row">H1821+643 központi kvazárjának fekete lyuka</th>
+              <td>30 000 000 000</td>
+              <td>Legközelebbi galaxis halmaz egy kvazárt tartalmazva magjában.</td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
     </div>
 
     <script src="dist/js/bootstrap.min.js"></script>
+    <script src="imgviewer.js"></script>
 </body>
 </html>

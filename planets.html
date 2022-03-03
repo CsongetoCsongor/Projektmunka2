@@ -11,6 +11,12 @@
 <body>
     <div class="container bg-primary">
 
+      <div class="center-screen" id="canvas">
+        <span onclick="closeCanvas()">Bezárás</span> <br>
+        <img src="" id="canvas-img" width="600px">
+        <p id="img-title"></p>
+      </div>
+
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -103,11 +109,11 @@
               A Föld a Naptól számított harmadik bolygó a Naprendszerben, ahol a legnagyobb átmérőjű, tömegű és sűrűségű Föld-típusú bolygó. Több millió faj, köztük az ember élőhelye is. A Föld a világegyetem egyetlen olyan bolygója, amelyről tudjuk, hogy életet hordoz. Jelenlegi ismereteink szerint 4,44–4,54 milliárd éve alakult ki, és a felszínén mintegy egy milliárd év múlva az élet is megjelent. Azóta a bioszféra jelentősen megváltoztatta az atmoszférát, és más, biotikus összetevőit. Ezzel lehetőség nyílt az aerob organizmusok osztódásos szaporodására, és létrejött az ózonréteg, amely megszűri a Nap felől érkező ultraibolya sugárzást. A Föld felszínét a Föld mágneses mezője védi a nagyenergiájú kozmikus sugárzástól. A Naprendszer külső körülményei a várakozások szerint még mintegy 1,5 milliárd évig támogatják az élet jelenlétét, de ezután a mind fényesebbé váló Nap el fogja tüntetni a bioszférát.
             </p>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4"><img src="images/earth_1.jpg" alt="Föld" title="Föld" width="250" class="mb-4"></div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4"><img src="images/earth_1.jpg" alt="Föld" title="Föld" width="250" class="mb-4 img-view" id="earth" onclick="showImg('earth')"></div>
         </div>
 
         <div class="row">
-          <div class="col-12 col-md-12 col-lg-3 offset-lg-2"><h1>Mars</h1><img src="images/mars_1.jpg" alt="Mars" title="Mars" class="mb-4 img-media-1"></div>
+          <div class="col-12 col-md-12 col-lg-3 offset-lg-2"><h1>Mars</h1><img src="images/mars_1.jpg" alt="Mars" title="Mars" class="mb-4 img-media-1 img-view" id="mars" onclick="showImg('mars')"></div>
           <div class="col-12 col-md-12 col-lg-5">    
             <p class="mt-5 text-justify">
               A Mars a Naptól számított negyedik bolygó a Naprendszerben. Szabad szemmel is könnyedén látható az éjszakai égbolton. A római hadistenről nevezték el, de gyakran hívják „vörös bolygónak” is színe miatt, amit a Mars felszínét meghatározó vas-oxid okoz. A Mars a harmadik legnagyobb kőzetbolygó, számos rendkívüli felszíni képződménnyel. Két természetes holdja van, a Phobos és a Deimos, mindkettő kicsi és szabálytalan alakú, valószínűleg befogott kisbolygók. Továbbá a 2000-es évek elejétől három mesterséges hold kíséri útján: Mars Odyssey, Mars Express és a Mars Reconnaissance Orbiter.
@@ -127,14 +133,13 @@
             </ul>
           </div>
         </div>
-        <div class="row">
-          <div class="col-10 offset-4">
-            <img src="images/earth-type.jpg" alt="4 Föld-típusú bolygó egymás mellett" title="4 Föld-típusú bolygó egymás mellett" class="mb-4">
-          </div>
-        </div>
+        
+            <img src="images/earth-type.jpg" alt="4 Föld-típusú bolygó egymás mellett" title="4 Föld-típusú bolygó egymás mellett" class="mb-4 img-view" id="center-content-2" width="350" onclick="showImg('center-content-2')">
+        
 
     </div>
 
     <script src="dist/js/bootstrap.min.js"></script>
+    <script src="imgviewer.js"></script>
 </body>
 </html>

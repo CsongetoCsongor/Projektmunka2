@@ -82,3 +82,103 @@ h1, h2, h3, h4, h5, h6 {
 #center-content-1 {
     margin-left: calc(50% - 250px);
 }
+
+@media screen and (max-width: 517px) {
+    #center-content-1 {
+        width: 400px;
+        margin-left: calc(50% - 200px);
+    }
+}
+
+#center-content-2 {
+    margin-left: calc(50% - 175px);
+}
+
+#center-content-3 {
+    margin-left: calc(50% - 125px);
+}
+
+#center-content-4 {
+    margin-left: calc(50% - 140px);
+}
+
+.center-screen {
+    position: fixed;
+    width: 600px;
+    height: fit-content;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px; /* Negative half of height. */
+    margin-left: -250px; /* Negative half of width. */
+    z-index: 10;
+    display: none;
+    text-align: right;
+}
+
+.center-screen img {
+    width: 600px;
+    background-color: white;
+}
+
+.center-screen #img-title {
+    background-color: aliceblue;
+    color: black;
+    text-align: center;
+    width: 600px;
+}
+
+@media screen and (max-width: 990px) {
+    .center-screen img {
+        width: 500px;
+    }
+
+    .center-screen #img-title { 
+        width: 500px;
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .center-screen {
+        position: fixed;
+        width: 600px;
+        height: fit-content;
+        top: 50%;
+        left: 50%;
+        margin-top: -100px; /* Negative half of height. */
+        margin-left: -250px; /* Negative half of width. */
+        z-index: 10;
+        display: none;
+        text-align: center;
+    }
+
+    .center-screen img {
+        width: 300px;
+    }
+
+    .center-screen #img-title { 
+        width: 300px;
+        margin-left: 150px;
+    }
+}
+
+.center-screen span {
+    cursor: pointer;
+    color: rgb(209, 51, 51);
+    text-decoration: underline;
+    background-color: aliceblue;
+}
+
+.img-view {
+    cursor: pointer;
+}
+
+#tableholder {
+    width: 80%;
+    margin-left: 10%;
+}
+
+caption {
+    font-size: 30px;
+}
+  /* background-color: red; */

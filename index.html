@@ -11,6 +11,12 @@
 <body>
     <div class="container bg-primary">
 
+      <div class="center-screen" id="canvas">
+        <span onclick="closeCanvas()">Bezárás</span> <br>
+        <img src="" id="canvas-img" width="600px">
+        <p id="img-title"></p>
+      </div>
+
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -100,16 +106,42 @@
     
 
         <h1 class="mt-5">Hírek</h1>
+
         <div class="row">
-          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-5 col-xxl-4 mt-4"><img src="images/dart.jpeg" alt="Double Asteroid Redirection Test (DART)" title="Double Asteroid Redirection Test (DART)" width="400"></div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-5 col-xxl-4 mt-4"><img src="images/dart.jpeg" alt="Double Asteroid Redirection Test (DART)" title="Double Asteroid Redirection Test (DART)" width="400" id="dart" onclick="showImg('dart')" class="img-view"></div>
           <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7 col-xxl-8">
             <h2>Fellőtték az első űrszondát, amely aszteroidát térít majd el</h2>
             <p class="text-justify">Először bocsátott fel a NASA olyan űrszondát, amely a tervek szerint neki fog csapódni egy aszteroidának, hogy megváltoztassa annak pályáját, elkerülendő Földdel való esetleges összeütközését. A DART (Double Asteroid Redirection Test) nevű űrszondát közép-európai idő szerint szerdán reggel indították útjára egy kaliforniai űrbázisról - a SpaceX magán űripari cég Falcon-9 rakétájával lőtték ki az űrbe. A kisautó-méretű szonda 10 hónap múlva fog összeütközni a Dimorphos nevű aszteroidával, a földközeli Didymos aszteroida körül keringő, 160 méter átmérőjű holddal, hogy a szakértők az űrben tesztelhessék a világ első bolygóvédelmi rendszerét, amely aszteroidabecsapódásoktól hivatott oltalmazni a Földet.</p>
           </div>
         </div>
 
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-5 col-xxl-4 mt-4"><img src="images/iss_1.jpg" alt="Nemzetközi Űrállomás" title="Nemzetközi Űrállomás" width="400" id="iss" onclick="showImg('iss')" class="img-view"></div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7 col-xxl-8">
+            <h2>Űrszemét csapódott a Nemzetközi Űrállomásba</h2>
+            <p class="text-justify">Egy űrszemét miatt sérült meg a Nemzetközi Űrállomás (ISS) egyik robotkarja – írja az IFLScience. A Canadarm2 működőképes maradt, az eset ennek ellenére ismét rávilágított, hogy az űrszemét egyre növekvő problémát jelent. A Canadarm2-t tervező Kanadai Űrügynökség (CSA) szerint a sérülést május 12-én fedezték fel egy rutinellenőrzés alatt. A törmelék túl kicsi volt ahhoz, hogy meg tudják figyelni, de elég nagy, hogy felsértse a robotkar külső rétegét. A CSA szerint a Canadarm2 folytatni tudja a tervezett feladatait, a sérülés csak a hővédő borítás egy kis részét érinti. Az űrkorszak kezdete óta egyre nő a Föld körül keringő hulladék mennyisége. A rakéták, műholdak, űrteleszkópok és egyéb űreszközök maradványai összeütközve még több törmeléket alakítanak ki, melyek óriási fenyegetést jelentenek a még működő szerkezetekre</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-5 col-xxl-4 mt-4"><img src="images/james_webb_1.jpg" alt="Az említett fotó" title="Az említett fotó" width="400" id="jameswebb" onclick="showImg('jameswebb')" class="img-view"></div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7 col-xxl-8">
+            <h2>Itt az első fotó, amit a James Webb űrteleszkóp készített</h2>
+            <p class="text-justify">A NASA egyelőre nem végezte el a James Webb űrtávcső teljes finomhangolását, ezért egy igen furcsa, homályos kép a szerkezet első felvétele. Bemutatta a NASA az első olyan felvételt, melyet a James Webb űrtávcső készített. A kép történelmi jelentősége nem kérdéses, a szervezet azonban már a bemutató előtt jelezte: senki ne számítson egy tökéletes fotóra, az eszközt ugyanis még nem állították be teljesen. A 10 milliárd dollárból fejlesztett szerkezetet 25 évvel ezelőtt kezdték el építeni, és számos csúszás után végül december 25-én indult útnak. Az eddigi legfejlettebb űrteleszkóp január végén érte el a végleges helyét, nagyjából 1,5 millió kilométerre a Földtől. A NASA a tervek szerint májusra készíti el az első olyan fotót, amilyeneket a jövőben a James Webbtől várhatunk, ám előzetesen már most mutatott egyet.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-5 col-xxl-4 mt-4"><img src="images/bernardinelli–bernstein_comet_1.jpg" alt="Bernardinelli–Bernstein üstökös" title="Bernardinelli–Bernstein üstökös" id="bb-comet" width="400" onclick="showImg('bb-comet')" class="img-view"></div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7 col-xxl-8">
+            <h2>Végre kiderült, mekkora az eddig talált legnagyobb üstökös</h2>
+            <p class="text-justify">A Bernardinelli–Bernstein üstökös méretét mikrohullám segítségével mérték meg. 2021 nyarán egy soha nem látott méretű üstököst fedezett fel az amerikai Pennsylvaniai Egyetem két kutatója. Pedro Bernardinelli és Gary Bernstein a róluk elnevezett Bernardinelli–Bernstein üstököst nem keresték közvetlenül, csupán véletlenül vették észre egy másik kutatási projekt közben. Hogy milyen nagy, arra csak becslések voltak: 96 és 193 kilométer közé tették az átmérőjét, ami akkor mond igazán valamit, ha mellétesszük, hogy egy átlagos üstökös nagyjából 9,5 kilométer nagyságú. A pontos méretét azóta is próbálták megmérni, és a jelek szerint sikerrel jártak a szakemberek. Emmanuel Lellouch, a párizsi obszervatórium tudósa szerint az üstökös mintegy 137 +/- 17 kilométer átmérőjű, ezzel pedig a valaha észlelt eddigi legnagyobb ilyen objektummá lépett elő. Méretét tekintve akár egy kisbolygó is lehetne.</p>
+          </div>
+        </div>
+
     </div>
 
     <script src="dist/js/bootstrap.min.js"></script>
+    <script src="imgviewer.js"></script>
 </body>
 </html>
